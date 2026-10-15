@@ -1,24 +1,21 @@
 # Forgotten Trails
 
-A small Fabric mod for Minecraft Java 26.1.2. Forgotten Trails adds abandoned camps to newly generated Overworld terrain. Camps have a cold campfire, remnants of a shelter, a supply chest, and a short broken gravel trail. Light the campfire with flint and steel to make the site useful again.
+Forgotten Trails is a vanilla+ Fabric mod for Minecraft Java 26.1.2. It adds small abandoned camps with a cold campfire, broken trail, and supply chest to newly generated Overworld terrain.
 
-A camp chest has a one-in-three chance to contain a **Trail Map** pointing to the nearest desert pyramid, jungle pyramid, or trial chamber within the map's search range. Other loot consists of ordinary travel supplies. If no target structure is found, Minecraft may leave the map unmarked.
+## Find a camp
+
+Use `/locate structure forgotten_trails:ruined_camp` with cheats or operator access. Camps generate in plains, forests, savannas, deserts, and meadows, roughly one placement attempt per 10×10 chunk region. Terrain and biome rules can make them farther apart. Explore new chunks after installing v0.2.0; old camps from v0.1.0 cannot be found with `/locate`.
+
+A camp chest has a one-in-three chance of a **Trail Map** pointing to a desert pyramid, jungle pyramid, or trial chamber within the map's search range. Other loot consists of travel supplies.
 
 ## Install
 
-1. Install Fabric Loader and Fabric API for Minecraft Java 26.1.2.
-2. Download the [preview JAR](dist/forgotten-trails-0.1.0.jar) and put it in the Fabric profile's `mods` folder.
-3. Generate new Overworld chunks to find camps. Existing terrain is left alone.
+1. Install Fabric Loader for Minecraft Java 26.1.2.
+2. Download `forgotten-trails-0.2.0.jar` from the [v0.2.0 release](https://github.com/ayush-cha/forgotten-trails/releases/tag/v0.2.0) and place it in your Fabric profile's `mods` folder.
+3. Start a world and explore newly generated Overworld chunks.
 
-## MVP details
+## Build and test
 
-- Each newly generated Overworld chunk has a 1-in-72 initial camp chance. A camp is placed only on a dry, flat 5×5 patch of grass, dirt, podzol, or sand above sea level, so actual frequency is lower.
-- Camps are built from vanilla blocks and fit entirely inside one chunk.
-- Trail maps use vanilla explorer-map behaviour and the mod's structure tag.
-- No new items or textures are required.
+Use JDK 25 or newer. Run `./gradlew build` (`gradlew.bat build` on Windows). Run `node tools/generate-structure.mjs` to regenerate the camp template and `node tools/validate.mjs` to check the worldgen references, NBT structure, and chest loot.
 
-## Build
-
-Use JDK 25 or newer, then run `./gradlew build` (`gradlew.bat build` on Windows). The wrapper is Gradle 9.8.1. The built mod appears at `build/libs/forgotten-trails-0.1.0.jar`.
-
-The preview JAR was compiled against Minecraft 26.1.2 and Fabric API 0.151.0+26.1.2, and its metadata and JSON were checked. In-game testing remains to be done.
+The v0.2.0 template and data validation passed. An isolated Minecraft server could not open its test world due to a Windows filesystem access error, so in-game generation and `/locate` have not yet been verified.

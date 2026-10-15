@@ -5,15 +5,9 @@
   "name": "Forgotten Trails",
   "description": "Discover abandoned camps and trail maps to vanilla structures.",
   "environment": "*",
-  "entrypoints": {
-    "main": [
-      "com.forgottentrails.ForgottenTrails"
-    ]
-  },
   "depends": {
     "fabricloader": ">=0.19.0",
     "minecraft": "26.1.2",
-    "java": ">=25",
-    "fabric-api": "*"
+    "java": ">=25"
   }
 }
