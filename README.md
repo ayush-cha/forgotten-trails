@@ -7,7 +7,7 @@ A camp chest has a one-in-three chance to contain a **Trail Map** pointing to th
 ## Install
 
 1. Install Fabric Loader and Fabric API for Minecraft Java 26.1.2.
-2. Download the release JAR and put it in the Fabric profile's `mods` folder.
+2. Download the [preview JAR](dist/forgotten-trails-0.1.0.jar) and put it in the Fabric profile's `mods` folder.
 3. Generate new Overworld chunks to find camps. Existing terrain is left alone.
 
 ## MVP details
@@ -21,4 +21,4 @@ A camp chest has a one-in-three chance to contain a **Trail Map** pointing to th
 
 Use JDK 25 or newer, then run `./gradlew build` (`gradlew.bat build` on Windows). The wrapper is Gradle 9.8.1. The built mod appears at `build/libs/forgotten-trails-0.1.0.jar`.
 
-The release JAR was compiled against Minecraft 26.1.2 and Fabric API 0.151.0+26.1.2, and its metadata and JSON were checked. In-game testing remains to be done.
+The preview JAR was compiled against Minecraft 26.1.2 and Fabric API 0.151.0+26.1.2, and its metadata and JSON were checked. In-game testing remains to be done.
