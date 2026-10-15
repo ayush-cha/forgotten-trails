@@ -1,3 +1,9 @@
+#IMPORTANT
+
+WIP!! Issues with chunk generation and crashes may arise.
+
+
+
 # Forgotten Trails
 
 Forgotten Trails is a vanilla+ Fabric mod for Minecraft Java 26.1.2. It adds small abandoned camps with a cold campfire, broken trail, and supply chest to newly generated Overworld terrain.
